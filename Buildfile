@@ -20,7 +20,7 @@ config :all,
 # off in your project buildfile by referencing sproutcore specifically
 mode :debug do
   config :all, 
-    :combine_javascript => true,
+    :combine_javascript => false,
     :combine_stylesheet => true
 end
 
@@ -48,6 +48,7 @@ config :sproutcore, :required => :desktop
 config :mini, :required => [:runtime, :datastore]
 config :animation, :required => :foundation
 config :forms, :required => :desktop
+config :designer, :required => [:runtime, :desktop, :foundation]
 
 # SPECIAL FRAMEWORKS AND THEMES
 # These do not require any of the built-in SproutCore frameworks
@@ -100,5 +101,5 @@ config :core_tools, :required => [:desktop, :animation, :forms]
   # mode :debug do
   #   config app_target, :combine_javascript => false
   # end
-  
 end
+config :greenhouse, :required => [:desktop, :designer]
