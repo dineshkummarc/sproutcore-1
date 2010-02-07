@@ -513,7 +513,8 @@ SC.ListItemView = SC.View.extend(
     
     // if content is not editable, then always let collection view handle the
     // event.
-    if (!this.get('contentIsEditable')) return NO ; 
+    //FIXME: this breaks disclosers!!!!!!!!!!
+    //if (!this.get('contentIsEditable')) return NO ; 
     
     // if occurred inside checkbox, item view should handle the event.
     if (this._isInsideCheckbox(evt)) {
